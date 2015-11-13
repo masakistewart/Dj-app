@@ -8,7 +8,7 @@
 <script src="https://connect.soundcloud.com/sdk/sdk-3.0.0.js"></script>
 <link rel="stylesheet" type="text/css" href="main.css">
 </head>
-<body>
+<body id="bgColor">
 <!-- Facebook sdk initialize -->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -29,17 +29,17 @@
             	<ul id="social" ng-controller="SocialController as social">
                 	<li id="social">
                         <a href="https://www.facebook.com/djmattinthehat">
-                            <img ng-src="{{social.product.images[0]}}">
+                            <img id="navButtons" ng-src="{{social.product.images[0]}}">
                         </a>
                     </li>
                     <li id="social">
                         <a href="https://soundcloud.com/m_i_t_h">
-                            <img ng-src="{{social.product.images[1]}}">
+                            <img id="navButtons" ng-src="{{social.product.images[1]}}">
                         </a>
                     </li>
                     <li id="social">
                         <a href="https://www.instagram.com/matt_inthehat/">
-                            <img ng-src="{{social.product.images[2]}}">
+                            <img id="navButtons" ng-src="{{social.product.images[2]}}">
                         </a>
                     </li>
                 </ul>
@@ -72,9 +72,8 @@
         <span class="icon-next"></span>
     	</a>
     </div>
-
 <!--Bio section-->
-    <div class="container zeroMargin" ng-controller="BioController as bio">
+    <div class="container" ng-controller="BioController as bio">
    		<div class="col-xs-8">
         	<div class="well">
     	<table>
@@ -97,7 +96,7 @@
             </div>
    		</div>
 <!-- facebook sidebar -->
-        <div class="col-xs-3 col-md-offset-1">
+        <div class="col-md-4">
          	<div class="fb-page well" data-href="https://www.facebook.com/djmattinthehat/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-height="861" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/djmattinthehat"><a href="https://www.facebook.com/djmattinthehat">Matt In The Hat</a></blockquote></div></div><br><br><br><br><br><br>
         </div>
     </div>

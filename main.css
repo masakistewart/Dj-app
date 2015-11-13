@@ -10,9 +10,29 @@
 	margin-bottom: 0;
 }
 
+#navButtons {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+#navButtons:hover {
+	box-shadow: 0px 0px 8px white;
+	border-radius: 5px;
+}
+
 /*.navbar-inverse {
 	background: #FF5A00;
 }*/
+
+#bgColor {
+	background: #777;
+}
+
+#mycarousel {
+	margin: 0;
+	padding-bottom: 30px;
+}
 
 #profilepic {
 	border-radius: 50%;
