@@ -1,0 +1,45 @@
+#social {
+	display: inline;
+}
+
+#mycarousel {
+	background: black;
+}
+
+.navbar {
+	margin-bottom: 0;
+}
+
+/*.navbar-inverse {
+	background: #FF5A00;
+}*/
+
+#profilepic {
+	border-radius: 50%;
+	border: 3px solid white;
+	box-shadow: 0px 0px 8px black;
+}
+
+#profilepic:hover {
+	box-shadow: 0px 0px 8px blue;
+}
+
+.picsMarginBottom {
+	margin-bottom: 30px;
+}
+
+.picsMarginBottom:hover{
+	box-shadow: 0px 0px 8px #e65212;
+}
+
+#facebookSideBar {
+	height: 800px;
+}
+
+#target {
+	margin-bottom: 30px;
+}
+
+#footer {
+	position: relative;
+}

@@ -5,10 +5,11 @@
 <title>Matt's Angular App</title>
 
 <link  rel="stylesheet" type="text/css" href="js/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="../Matt's Static Website/css_js/main1.css">
+<script src="https://connect.soundcloud.com/sdk/sdk-3.0.0.js"></script>
+<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-
+<!-- Facebook sdk initialize -->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -18,28 +19,40 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
+<!-- header here -->
 	<div id="navbar" class="navbar navbar-static-top navbar-inverse">
     	<div class="container">
-        	<div class="nav navbar-brand">Matt In The Hat</div>
-            
+            <div class="navbar-header">
+        	   <a href="#" class="navbar-brand">Matt In The Hat</a>
+            </div>
             <div class="pull-right">
             	<ul id="social" ng-controller="SocialController as social">
-                	<li><a href="#"><img ng-src="{{social.product.images[0]}}"></a></li>
-                    <li><a href="#"><img ng-src="{{social.product.images[1]}}"></a></li>
-                    <li><a href="#"><img ng-src="{{social.product.images[2]}}"></a></li>
+                	<li id="social">
+                        <a href="https://www.facebook.com/djmattinthehat">
+                            <img ng-src="{{social.product.images[0]}}">
+                        </a>
+                    </li>
+                    <li id="social">
+                        <a href="https://soundcloud.com/m_i_t_h">
+                            <img ng-src="{{social.product.images[1]}}">
+                        </a>
+                    </li>
+                    <li id="social">
+                        <a href="https://www.instagram.com/matt_inthehat/">
+                            <img ng-src="{{social.product.images[2]}}">
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
     </div>
-    
+            <!-- the carousel -->
 <div id="mycarousel" class="carousel slide">
     	<ol class="carousel-indicators">
         	<li data-target="#mycarousel" data-slide-to="0" class="active"></li>
             <li data-target="#mycarousel" data-slide-to="1"></li>
             <li data-target="#mycarousel" data-slide-to="2"></li>
         </ol>
-   
         <div class="carousel-inner">
             <div class="item active">
                 <center><img src="images/mattdj2.jpg" height="600" width="400" alt="later" class="img-responsive"></center>
@@ -59,8 +72,9 @@
         <span class="icon-next"></span>
     	</a>
     </div>
-    
-    <div class="container" ng-controller="BioController as bio">
+
+<!--Bio section-->
+    <div class="container zeroMargin" ng-controller="BioController as bio">
    		<div class="col-xs-8">
         	<div class="well">
     	<table>
@@ -73,26 +87,25 @@
             </tbody>
          </table>
         </div>
-         
+<!-- promo images -->
              <div id="promo" class="well" ng-controller="PromoController as promo">
-                <img ng-src="{{ promo.product.images[0] }}" alt="something" width="24%" height="80%">
-                <img ng-src="{{ promo.product.images[1] }}" alt="something" width="24%" height="80%">
-                <img ng-src="{{ promo.product.images[2] }}" alt="something" width="24%" height="80%">
-                <img ng-src="{{ promo.product.images[3] }}" alt="something" width="24%" height="80%">
+                <img class="picsMarginBottom" ng-src="{{ promo.product.images[0] }}" alt="something" width="24%" height="80%">
+                <img class="picsMarginBottom" ng-src="{{ promo.product.images[1] }}" alt="something" width="24%" height="80%">
+                <img class="picsMarginBottom" ng-src="{{ promo.product.images[2] }}" alt="something" width="24%" height="80%">
+                <img class="picsMarginBottom" ng-src="{{ promo.product.images[3] }}" alt="something" width="24%" height="80%">
+                <div id="target"></div>
             </div>
    		</div>
-         
-      <div class="col-xs-3 col-md-offset-1 well">
-         	<div class="fb-page" data-href="https://www.facebook.com/djmattinthehat/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/djmattinthehat"><a href="https://www.facebook.com/djmattinthehat">Matt In The Hat</a></blockquote></div></div>
-         </div>
-        
+<!-- facebook sidebar -->
+        <div id="facebookSideBar" class="col-xs-3 col-md-offset-1">
+         	<div class="fb-page well" data-href="https://www.facebook.com/djmattinthehat/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/djmattinthehat"><a href="https://www.facebook.com/djmattinthehat">Matt In The Hat</a></blockquote></div></div><br><br><br><br><br><br>
+        </div>
     </div>
-    
-    
-    <div class="nav navbar-fixed-bottom navbar-inverse">
+<!-- footer -->
+    <div id="footer" class="nav navbar-fixed-bottom navbar-inverse">
     	<p class="navbar-text text-center">CreatedBy Cairo Stewart</p>
     </div>
-    
+<!-- all that goodstuff.js  -->
     <script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/angular.min.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>

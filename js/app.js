@@ -38,6 +38,38 @@ app.controller('BioController', function(){
 	this.product = biography;
 });
 
- $('#mycarousel').carousel({ interval: 100 });
-
 })();
+
+window.onload = function(){
+	SC.initialize({
+		client_id: '193e028621166a2a5d132da654750478'
+	})
+
+	var client_id = '193e028621166a2a5d132da654750478';
+	var mattsID;
+	var getMattID = $.ajax({
+		type: "GET",
+		url: "http://api.soundcloud.com/users/m_i_t_h?client_id="+client_id
+	});
+
+	getMattID.done(function(data){
+		mattsID = data.id;
+
+		var getMattTracks = $.ajax({
+			type: 'GET',
+			url: 'http://api.soundcloud.com/users/' + mattsID + '/tracks?client_id=' + client_id
+		})
+
+		getMattTracks.done(function(tracks){
+			console.log(tracks);
+			tracks.forEach(function(that){
+				console.log(that.uri)
+				SC.oEmbed(that.uri, {
+					element: $("#target")[0]
+				});
+			});
+		})
+	})
+
+
+}
