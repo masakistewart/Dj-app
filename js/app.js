@@ -41,6 +41,14 @@ app.controller('BioController', function(){
 })();
 
 window.onload = function(){
+	// INSTAGRAM
+	var instaClientID = '97c1280b6c1c428da71d74fe5b7aed8c';
+	var testRequest = 'https://api.instagram.com/v1/users/matt_inthehat/?access_token=
+' + instaClientID;
+	var initialInsta = 
+
+
+	// SOUNDCLOUD API REQUESTS
 	SC.initialize({
 		client_id: '193e028621166a2a5d132da654750478'
 	})
