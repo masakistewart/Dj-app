@@ -70,14 +70,21 @@ window.onload = function(){
 
 		getMattTracks.done(function(tracks){
 			console.log(tracks);
-			tracks.forEach(function(that){
-				console.log(that.uri)
-				SC.oEmbed(that.uri, {
-					element: $("#target")[0]
+			for (var i = 0; i < tracks.length; i++) {
+				SC.oEmbed(tracks[i].uri, {
+					element: $('#target'+i)[0],
+					maxheight: 166,
+					iframe: true
 				});
-			});
+			};
 		})
+
+		// SC.get('/users/' + mattsID).then(function(data){
+		// 	console.log(data);
+		// })
 	})
+
+	
 
 
 }
