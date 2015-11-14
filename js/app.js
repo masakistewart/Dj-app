@@ -16,7 +16,7 @@ app.controller('CarouselController', function(){
 
 var biography  = {
 		title: "Bio",
-		paragraph: "Dj Matt In The Hatt was born and raised a San Francisco Native. Always had a passions for music and wanted to be a Dj. He launched his music carreer while attending Arizona State University and has been a major success. Booked up most nights during the week. Knows the Buisness side of things and appreciates having succinct and proffessional buisness dealings!",
+		paragraph: "Organic four loko food truck asymmetrical. Church-key kitsch food truck gluten-free. Migas artisan drinking vinegar leggings franzen lomo. Butcher artisan pickled, helvetica cold-pressed tacos seitan austin keffiyeh you probably haven't heard of them plaid health goth pug. Trust fund selvage readymade, gastropub ethical narwhal kogi artisan. Franzen swag authentic, sustainable deep v tote bag meh banjo biodiesel. Franzen pop-up vinyl, pabst yuccie church-key blue bottle sustainable schlitz lomo ramps authentic narwhal bitters marfa.",
 		images: ["images/mattdj2.jpg"]
 };
 
