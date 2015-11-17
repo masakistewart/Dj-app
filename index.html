@@ -4,23 +4,27 @@
 <meta charset="UTF-8">
 <title>Matt's Angular App</title>
 
-<link  rel="stylesheet" type="text/css" href="js/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://bootswatch.com/darkly/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <script src="https://connect.soundcloud.com/sdk/sdk-3.0.0.js"></script>
 <link rel="stylesheet" type="text/css" href="main.css">
+<script type="text/javascript" src="js/Chart.min.js"></script>
 </head>
 <body id="bgColor">
 <!-- Facebook sdk initialize -->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=737162956417049";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=737162956417049";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
 
 <!-- header here -->
-	<div id="navbar" class="navbar navbar-static-top navbar-inverse">
+	<div id="navbar" class="navbar navbar-static-top navbar-default">
     	<div class="container">
             <div class="navbar-header">
         	   <a href="#" class="navbar-brand">Matt In The Hat</a>
@@ -73,7 +77,7 @@
     	</a>
     </div>
 <!--Bio section-->
-    <div class="container" ng-controller="BioController as bio">
+    <div id='bioSection' class="container" ng-controller="BioController as bio">
    		<div class="col-xs-8">
         	<div class="well">
     	<table>
@@ -94,6 +98,7 @@
                 <img class="picsMarginBottom" ng-src="{{ promo.product.images[3] }}" alt="something" width="24%" height="80%">
                 <div id="target0"></div>
                 <div id="target1"></div>
+                <canvas id='chartTarget' width="700" height="400"></canvas>
             </div>
    		</div>
 <!-- facebook sidebar -->
@@ -102,7 +107,7 @@
         </div>
     </div>
 <!-- footer -->
-    <div id="footer" class="nav navbar-fixed-bottom navbar-inverse">
+    <div id="footer" class="navbar navbar-fixed-bottom navbar-default">
     	<p class="navbar-text text-center">CreatedBy Cairo Stewart</p>
     </div>
 <!-- all that goodstuff.js  -->

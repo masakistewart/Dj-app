@@ -77,6 +77,30 @@ window.onload = function(){
 					iframe: true
 				});
 			};
+
+			var data = {
+    	labels: ["Playback Count"],
+	    datasets: [
+		        {
+		            label: tracks[0].title,
+		            fillColor: "rgba(220,220,220,0.5)",
+		            strokeColor: "rgba(220,220,220,0.8)",
+		            highlightFill: "rgba(220,220,220,0.75)",
+		            highlightStroke: "rgba(220,220,220,1)",
+		            data: [tracks[0].playback_count]
+		        },
+		        {
+		            label: tracks[0].title,
+		            fillColor: "rgba(151,187,205,0.5)",
+		            strokeColor: "rgba(151,187,205,0.8)",
+		            highlightFill: "rgba(151,187,205,0.75)",
+		            highlightStroke: "rgba(151,187,205,1)",
+		            data: [tracks[1].playback_count]
+		        }
+	    	]
+		};
+		var ctx = $("#chartTarget").get(0).getContext("2d");
+		var myNewChart = new Chart(ctx).Bar(data);
 		})
 
 		// SC.get('/users/' + mattsID).then(function(data){
@@ -84,7 +108,5 @@ window.onload = function(){
 		// })
 	})
 
-	
-
-
-}
+	// chartTest SECTIO
+};
